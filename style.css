@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent Horizontal Scrolling */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw; /* Prevents any potential overflow issues */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black !important;
+    
+}
+
+
+.nav-bar {
+    background-color: black;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 2); /* Center content with dynamic padding */
+}
+
+.nav-items {
+    display: flex; /* Make it a flex container */
+    gap: 3rem; /* Add space between links */
+}
+
+.nav-item {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text for contrast */
+    font-size: 1.2rem; /* Adjust font size */
+    padding: 0.5rem 1rem; /* Add some padding around links */
+    border-radius: 5px; /* Optional: Round corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-item:hover {
+    background-color: gray; /* Add hover effect */
+}
+
+.logo {
+    padding-left: 30px; /* Space between logo and container edge */
+    display: flex;
+    align-items: center; /* Vertically align logo */
+}
+
+.logo img {
+    height: 50px; /* Adjust logo size */
+    width: auto;
+}
+
+
+.hero {
+    display: flex;
+    flex-direction: column; /* Stack text and button vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: calc(100vh - 110px); /* Full viewport height minus navbar */
+    color: white;
+    text-align: center; /* Center text inside the hero section */
+    background: url('media/banner2.png') no-repeat center center/cover; /* Add banner as background */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+}
+
+
+.mailing-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center-align text */
+    padding: 50px 20px;
+    background-color: #121212; /* Dark background */
+    color: white;
+    min-height: 50vh; /* Ensure enough height for visual balance */
+}
+
+.mailing-content {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 30px; /* Space between image and text */
+    max-width: 900px;
+    width: 100%;
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+}
+
+.circle-image img {
+    width: 156px; /* Increased by 30% */
+    height: 156px; /* Match width for a perfect circle */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits within the circle */
+    margin-bottom: 20px; /* Space below image */
+}
+
+.mailing-text {
+    flex: 1; /* Take up remaining space */
+}
+
+.mailing-text h2 {
+    font-size: 2.5rem; /* Bigger font size for heading */
+    margin: 0 0 10px; /* Space below heading */
+}
+
+.mailing-text p {
+    margin: 0 0 20px; /* Space below paragraph */
+    font-size: 1rem;
+    color: #cccccc; /* Slightly lighter text for description */
+}
+
+.mailing-form {
+    display: flex;
+    gap: 10px; /* Space between input and button */
+    justify-content: center; /* Center input and button */
+    flex-wrap: wrap; /* Wrap form fields if needed */
+}
+
+.mailing-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    flex: 1; /* Make the input stretch */
+    min-width: 200px; /* Minimum size for input */
+}
+
+.mailing-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: rgb(181, 181, 19);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mailing-form button:hover {
+    background-color: #14833b; /* Darker green on hover */
+}
+
+.bookings {
+    text-align: center; /* Center-align heading */
+    padding: 50px 20px;
+    background-color: #121212; /* Dark background */
+    color: white;
+    background: url('media/banner.png') no-repeat center center/cover; /* Add banner as background */
+}
+
+.bookings h2 {
+    font-size: 2.5rem; /* Larger font size for heading */
+    margin-bottom: 30px;
+}
+
+.booking-content {
+    display: flex;
+    justify-content: space-between; /* Align email and icons to sides */
+    align-items: center; /* Vertically align items */
+    max-width: 900px;
+    margin: 0 auto; /* Center content */
+    gap: 20px; /* Space between left and right sections */
+}
+
+.contact-email {
+    flex: 1; /* Take up space on the left */
+    text-align: left;
+}
+
+.contact-email p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.contact-email a {
+    color: #1db954; /* Spotify green for email link */
+    text-decoration: none;
+}
+
+.contact-email a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    flex: 1; /* Take up space on the right */
+    display: flex;
+    justify-content: flex-end; /* Align icons to the right */
+    gap: 15px; /* Space between icons */
+}
+
+.social-media a img {
+    width: 50px; /* Icon size */
+    height: 50px; /* Make width and height equal for a perfect circle */
+    border-radius: 50%; /* Makes the icon circular */
+    object-fit: cover; /* Ensures the image fits well */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+}
+
+.social-media a img:hover {
+    transform: scale(1.1); /* Slight zoom-in effect on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+.nav-item.active {
+    color: yellow !important; /* Highlight active link */
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.about{
+    color:white;
+}
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .left-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            flex: 1; /* Adjust width relative to the right section */
+        }
+
+        .box {
+            background-color: #ddd;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .large-box {
+            flex: 1; /* Make it twice as wide as the left section */
+            background-color: #ddd;
+            border: 2px solid ; /* Highlight the large box for clarity */
+            padding: 20px;
+        }
+
+        .middle-box {
+                background-color: yellow;
+                max-width: 50vw;
+                text-align: center;
+                margin: 0 auto;
+
+            
+        }
+
+        .tracks {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px; /* Spacing between tracks */
+            justify-items: center; /* Center each track horizontally */
+        }
+        
+        .track {
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .track h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .track iframe {
+            width: 300px; /* Width of each player */
+            height: 80px; /* Height of each player */
+            border-radius: 8px;
+        }
+    
